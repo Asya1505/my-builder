@@ -1,0 +1,39 @@
+extends ../_template
+
+block variables
+    - var title = 'Авторизация'
+
+block content
+    section.section.hero
+        img.hero__bg(src="./assets/img/bg_head.png")
+        .hero__container
+            a(href="#").avtorization
+                .avtorization__btn
+                    .avtorization__text Авторизоваться
+            .hero__title
+                .user.hero__user-avt
+                    .hero__avt
+                        .user__pic
+                            img(src="./assets/img/viking.png", alt="").user__pic-img
+                        .user__description
+                            .user__name Владимир Астахов
+                            .user__desc Личный сайт разработчика
+                        ul.socials
+                            each item in ['vk', 'github', 'in']
+                                li.socials__item
+                                    a(href=`${item}`).socials__link
+                                        svg.socials__img
+                                            use(xlink:href="./assets/img/sprite.svg#" +`${item}`)
+                    .welc__menu
+                        a(href="#").menu__col.menu__col-left
+                            .menu__text
+                                .menu__link Мои работы
+                        a(href="#").menu__col.menu__col-center
+                            .menu__text
+                                .menu__link Обо мне
+                        a(href="#").menu__col.menu__col-right
+                            .menu__text
+                                .menu__link Блог
+            .hero__scroll-button
+                .footer__row-welc.footer__text
+                    p © Владимир Астахов | создано с любовью в LoftSchool | 2016

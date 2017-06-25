@@ -1,0 +1,89 @@
+extends ../_template
+
+block variables
+    - var title = 'Блог'
+
+block content
+    section.blog__head
+        img.blog__bg(src="./assets/img/bg_head.png")
+        .hero__container
+            .hero__menu
+                ul.socials
+                    each item in ['vk', 'github', 'in']
+                        li.socials__item
+                            a(href=`${item}`).socials__link
+                                svg.socials__img
+                                    use(xlink:href="./assets/img/sprite.svg#"+`${item}`)
+                .hamburger
+                    a(href='#').hamburger__link
+                        svg.hamburger__img
+                            use(xlink:href="./assets/img/sprite.svg#hamburger")
+            .hero__title
+                .section-title
+                    svg.section-title__pic
+                        use(xlink:href="./assets/img/sprite.svg#stars1")
+                .user.hero__user
+                    .user__pic
+                        img(src="./assets/img/viking.png", alt="").user__pic-img
+                    .user__description
+                        .user__name-blog Блог
+                        .user__desc-blog Статьи, которые я написал
+
+    section.section.blog
+        .triangle__left
+            .triangle.triangle_fill_white.about__left-triangle
+                svg(viewbox="0 0 1000 150" preserveAspectRatio="none").triangle__svg
+                    polygon(points="0,0 0,150 1000,150")
+
+        .triangle__right
+            .triangle.triangle_fill_white.about__left-triangle
+                svg(viewbox="0 0 1000 150" preserveAspectRatio="none").triangle__svg
+                    polygon(points="1000,0 1000,150 0,150")
+        .blog__container
+            .blog__left
+                .blog__left-content
+                    .blok__btn
+                        a(href="#").blok__link
+                            .blok__btntext Самое важное в SASS
+                        a(href="#").blok__link
+                            .blok__btntext Приёмы в вёрстке, без которых не обходится ни один сайт
+                        a(href="#").blok__link
+                            .blok__btntext Самый необходимый набор Gulp плагинов
+                        a(href="#").blok__link
+                            .blok__btntext Почему я выбрал Jade
+
+            .blog__right
+                .blog__right-content
+                    .content__title Самое важное в SASS
+                    .content__time 22 ноября 2016
+                    .content__text
+                        p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+                        p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+
+            footer.footer
+                .footer__row
+                    .footer__col.footer__col-left
+                        .footer__text
+                            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+                    .footer__col.footer__col-center
+                        .footer__menu
+                            nav.menu
+                                each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+                                    li.menu__item
+                                        a(href="#").menu__link #{item}
+                        .footer__socials
+                            ul.socials
+                                each item in ['vk', 'github', 'in']
+                                    li.socials__item
+                                        a(href=`${item}`).socials__link
+                                            svg.socials__img
+                                                use(xlink:href="./assets/img/sprite.svg#" +`${item}`)
+                        .socials.socials_rounded
+                    .footer__col.footer__col-right
+                        ul.footer__text
+                            li skype_kdn
+                            li astahov@gmail.com
+                            li +7 931 200 93 24
+                            li Новосибирск, ул. Инская, д.14
+                .footer__row-last.footer__text
+                    p © Владимир Астахов | создано с любовью в LoftSchool | 2016

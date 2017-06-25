@@ -1,0 +1,38 @@
+.welc__menu{
+
+}
+
+.menu__col{
+  width: calc(100%/3 - 21px);
+  float: left;
+  padding:10px;
+  color: #ffffff;
+  background-color: #0548be;
+  text-decoration: none;
+}
+
+.menu__col-center{
+  height: 100%;
+  border-right: 1px rgba(255,255,255,0.6) solid;
+  border-left: 1px rgba(255,255,255,0.6) solid;
+}
+
+.avtorization{
+  width: 150px;
+  padding: 20px 16px;
+  border: 1px rgba(255,255,255,0.6) solid;
+  color: #ffffff;
+  float: right;
+  margin: 24px;
+  text-align: center;
+  text-decoration: none;
+}
+.avtorization__link{
+  display : inline-block;
+  width:100%
+}
+
+.footer__row-welc{
+  text-align: center;
+  color: #ffffff;
+}
