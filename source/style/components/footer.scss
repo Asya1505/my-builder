@@ -23,10 +23,11 @@
 }
 
 .footer__col{
-  width: calc(100%/3 - 62px);
+  width: calc(100%/3);
   float: left;
   padding:0 30px;
   color: #ffffff;
+  box-sizing: border-box;
 }
 
 .footer__col-center{

@@ -10,6 +10,7 @@
   height: 294px;
   right: 0;
   left: 0;
+  padding: 60px;
   @include centered();
 }
 .contacts__title {
@@ -51,7 +52,7 @@
 }
 
 .block-subtitle{
-  margin: 40px;
+  margin-bottom: 40px;
   font-size: 36px;
   text-transform: uppercase;
   color: #474b57;

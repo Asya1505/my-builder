@@ -4,7 +4,7 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    section.blog__head
+    section.work__head
         img.blog__bg(src="./assets/img/bg_head.png")
         .hero__container
             .hero__menu
@@ -24,14 +24,14 @@ block content
                         use(xlink:href="./assets/img/sprite.svg#stars1")
                 .user.hero__user
                     .user__pic
-                        img(src="./assets/img/viking.png", alt="").user__pic-img
+                        img(src="./assets/img/photo1.png", alt="").user__pic-img
                     .user__description
-                        .user__name Владимир Астахов
+                        .user__name Асия Муксимова
                         .user__desc Личный сайт разработчика
             .arrow-down.hero__scroll-button
                 svg.arrow-down__pic
                     use(xlink:href="./assets/img/sprite.svg#arrow-down")
-    section.section.blog
+    section.section__work
         .triangle__left
             .triangle.triangle_fill_black.about__left-triangle
                 svg(viewbox="0 0 1000 150" preserveAspectRatio="none").triangle__svg
@@ -54,90 +54,105 @@ block content
                         .title__desc Сайт школы онлайн образования
                         .title__desc-lg html, css, javascript
                         .work__btn
-                            a(href="#").btn_link
-                                .btn__text Посмотреть сайт
+                            form(action="https://loftschool.com/")
+                                button(type='submit').btn__work
+                                    svg.btn__img
+                                        use(xlink:href="./assets/img/sprite.svg#link")
+                                    .btn__text Посмотреть сайт
             .work__right
                 .work__right-content
-                    .w__row
-                        .work__description
-                            img.works(src="./assets/img/works.png")
-                    .w__row
-                        .w__left
-                            img.works(src="./assets/img/w1.png")
-                        .w__right
-                            img.works(src="./assets/img/w2.png")
-    section.section.blog
-        .work__container
-            img.work__bg(src="./assets/img/works_bg.png")
-            .work__row.work__row-head
-                .work__title
-                    svg.work-title__pic
-                        use(xlink:href="./assets/img/sprite.svg#stars3")
-                .work__description
-                    .work__name что обо мне
-                    .work__name говорят
-            .work__row.work__row-comment
-                .work__col-left
-                    .comment__pic
-                        img(src="./assets/img/viking.png", alt="").comment__pic-img
-                    .comment__description
-                        .comment__descp Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                        .comment__name Блог
-                .work__col-right
-                    .comment__pic
-                        img(src="./assets/img/viking.png", alt="").comment__pic-img
-                    .comment__description
-                        .comment__descp Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                        .comment__name Блог
-            .work__row.work__row-call
-                .work__col-call
-                   .call__title
-                       .call__title-head Связаться со мной
-                       .call__input
-                           input(type='text'
-                           name='name'
-                           placeholder= 'Ваше имя'
-                           ).input__coll.input__coll-name
-                           input(type='mail'
-                           name='name'
-                           placeholder= 'Ваш email'
-                           ).input__coll.input__coll-mail
-                           input(type='textarea'
-                           name='name'
-                           placeholder= 'Ваше сообщение'
-                           ).input__coll.input__coll-text
-                   .welc__menu
-                       a(href="#").menu__call
-                           .menu__text
-                               .menu__link Отправить
-                       a(href="#").menu__call
-                           .menu__text
-                               .menu__link Очистить
-
-            footer.footer
-                .footer__row
-                    .footer__col.footer__col-left
-                        .footer__text
-                            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-                    .footer__col.footer__col-center
-                        .footer__menu
-                            nav.menu
-                                each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
-                                    li.menu__item
-                                        a(href="#").menu__link #{item}
-                        .footer__socials
-                            ul.socials
-                                each item in ['vk', 'github', 'in']
-                                    li.socials__item
-                                        a(href=`${item}`).socials__link
-                                            svg.socials__img
-                                                use(xlink:href="./assets/img/sprite.svg#" +`${item}`)
-                        .socials.socials_rounded
-                    .footer__col.footer__col-right
-                        ul.footer__text
-                            li skype_kdn
-                            li astahov@gmail.com
-                            li +7 931 200 93 24
-                            li Новосибирск, ул. Инская, д.14
-                .footer__row-last.footer__text
-                    p © Владимир Астахов | создано с любовью в LoftSchool | 2016
+                    .w__row.w__row-up
+                        .work__desc
+                            img.works__pic-main(src="./assets/img/works.png")
+                    .w__row.w__row-down
+                        .w__left(style="background: url('./assets/img/w1.png') no-repeat;background-size: cover;")
+                            .up__pic
+                                svg.w-down__pic
+                                    use(xlink:href="./assets/img/sprite.svg#arrow-down")
+                        .w__right(style="background: url('./assets/img/w2.png') no-repeat;background-size: cover;")
+                            .up__pic
+                                svg.w-up__pic
+                                    use(xlink:href="./assets/img/sprite.svg#arrow-down")
+    section.section__work.blog(style="background: url('./assets/img/works_bg.png') no-repeat;background-size: cover;")
+        .work__container(style='margin-bottom:185px;')
+            .work__container-call
+                .work__row
+                    //.work__title
+                    //    svg.work-title__pic
+                    //        use(xlink:href="./assets/img/sprite.svg#stars3")
+                    .work__row-head(style="background-image: url('./assets/img/sprite.svg#stars3');")
+                        .work__name-call что обо мне говорят
+                .work__row.work__row-comment
+                    .work__col-left
+                        .comment__pic
+                            img(src="./assets/img/viking.png", alt="").comment__pic-img
+                        .comment__description
+                            .comment__descp Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                            .comment__name
+                                p Ковальчук Дмитрий
+                                p — основатель Loftschool
+                    .work__col-right
+                        .comment__pic
+                            img(src="./assets/img/viking.png", alt="").comment__pic-img
+                        .comment__description
+                            .comment__descp Этот код выдержеит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                            .comment__name
+                                p Сабанцев Владимир
+                                p — преподаватель
+                .work__row.work__row-call
+                    .work__col-call
+                       .call__title
+                           .call__title-head Связаться со мной
+                           .call__input
+                               input(type='text'
+                               name='name'
+                               placeholder= 'Ваше имя'
+                               ).input__coll.input__coll-name
+                               input(type='mail'
+                               name='name'
+                               placeholder= 'Ваш email'
+                               ).input__coll.input__coll-mail
+                               input(type='textarea'
+                               name='name'
+                               placeholder= 'Ваше сообщение'
+                               row=45
+                               ).input__coll.input__coll-text
+                       .welc__menu
+                           a(href="#").menu__call-send
+                               .menu__text
+                                   .menu__link Отправить
+                           a(href="#").menu__call
+                               .menu__text
+                                   .menu__link Очистить
+                .work__row
+                    .work__row-head
+                        .work__name-call
+                            svg.arrow-up__pic
+                                use(xlink:href="./assets/img/sprite.svg#arrow-down")
+    footer.footer
+        .footer__row
+            .footer__col.footer__col-left
+                .footer__text
+                    p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+            .footer__col.footer__col-center
+                .footer__menu
+                    nav.menu
+                        each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+                            li.menu__item
+                                a(href="#").menu__link #{item}
+                .footer__socials
+                    ul.socials
+                        each item in ['vk', 'github', 'in']
+                            li.socials__item
+                                a(href=`${item}`).socials__link
+                                    svg.socials__img
+                                        use(xlink:href="./assets/img/sprite.svg#" +`${item}`)
+                .socials.socials_rounded
+            .footer__col.footer__col-right
+                ul.footer__text
+                    li skype_kdn
+                    li astahov@gmail.com
+                    li +7 931 200 93 24
+                    li Новосибирск, ул. Инская, д.14
+        .footer__row-last.footer__text
+            p © Асия Муксимова | создано с любовью в LoftSchool | 2016
