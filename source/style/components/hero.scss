@@ -40,6 +40,10 @@
   @include centered();
   text-align: center;
   background-color: rgba(0,0,0,0.5);
+
+  @include phones{
+    width: 95%;
+  }
 }
 .hero__avt{
   padding: 40px 40px 0 40px;

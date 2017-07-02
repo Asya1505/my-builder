@@ -27,20 +27,28 @@
   color: #ffffff;
   text-align: center;
 }
-.work__col-right{
-  width: 380px;
+.work__col-cont{
+  width: 50%;
   float: left;
   display: inline-block;
-  margin: 20px;
+  @include desctop{
+    width: 50%;
+  }
+  @include tablets{
+    width: 50%;
+  }
+  @include phones{
+    width: 100%;
+  }
+}
+
+.work__col-right{
+  margin: 16px;
   color:#ffffff;
 }
 .work__col-left{
-  width: 380px;
   color:#ffffff;
-  float: left;
-  display: inline-block;
-  margin: 20px;
-
+  margin: 16px;
 }
 
 .comment__pic{
@@ -61,6 +69,15 @@
   display: inline-block;
   margin: 20px;
   text-align: center;
+  @include desctop{
+    margin: 20px;
+  }
+  @include tablets{
+    margin: 0;
+  }
+  @include phones{
+    margin: 0;
+  }
 }
 .call__input{
   padding: 20px;
@@ -119,12 +136,30 @@
   display: flex;
   align-items: center;
   justify-content:center;
+  @include desctop{
+    width: 50%;
+  }
+  @include tablets{
+    width: 100%;
+  }
+  @include phones{
+    width: 100%;
+  }
 }
 
 .work__right {
   width: 50%;
   background-color: #e3e2de;
   align-self: flex-end;
+  @include desctop{
+    width: 50%;
+  }
+  @include tablets{
+    width: 100%;
+  }
+  @include phones{
+    width: 100%;
+  }
 }
 
 .title__desc{
@@ -239,9 +274,17 @@
 .work__container {
   display: -webkit-flex; /* Safari */
   display: flex;
-  flex-direction: row;
   align-items: stretch;
   justify-content:center;
+  @include desctop{
+    flex-direction: row;
+  }
+  @include tablets{
+    flex-direction: column-reverse;
+  }
+  @include phones{
+    flex-direction: column-reverse;
+  }
 }
 .works__pic-main{
   margin: 100px 0;
@@ -252,6 +295,15 @@
 
 .work__container-call{
   width: 840px;
+  @include desctop{
+    width: 840px;
+  }
+  @include tablets{
+    width: 100%;
+  }
+  @include phones{
+    width: 100%;
+  }
   height: 100%;
   display: -webkit-flex; /* Safari */
   display: flex;

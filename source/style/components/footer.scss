@@ -4,11 +4,35 @@
   left: 0;
   height: 185px;
   top:calc(100% - 185px);
+  @include desctop{
+    height: 185px;
+    top:calc(100% - 185px);
+  }
+  @include tablets{
+    height: 200px;
+    top:calc(100% - 200px);
+  }
+  @include phones{
+    height: 300px;
+    top:calc(100% - 300px);
+  }
 }
 .footer__row{
    background-color: rgba(0,0,0,0.8);
    padding: 30px 0;
    height: 87px;
+  @include desctop{
+    height: 87px;
+    padding: 30px 0;
+  }
+  @include tablets{
+    height: 100px;
+    padding: 20px 0 50px 0;
+  }
+  @include phones{
+    height: 190px;
+    padding: 20px 0 60px 0;
+  }
 }
 
 .footer__row-last{
@@ -18,19 +42,93 @@
   padding-top: 10px;
 }
 .footer__row-last p{
+  display: inline-block;
   color: #ffffff;
   margin-top: 0;
 }
 
 .footer__col{
-  width: calc(100%/3);
   float: left;
   padding:0 30px;
   color: #ffffff;
-  box-sizing: border-box;
+  @include desctop{
+    width: calc(100%/3);
+    box-sizing: border-box;
+  }
+  @include tablets{
+    text-align: center;
+    width: calc(100%);
+    box-sizing: border-box;
+  }
+  @include phones{
+    text-align: center;
+    width: calc(100%);
+    box-sizing: border-box;
+  }
 }
-
+.footer__col-left{
+  width: calc(100%/3);
+  box-sizing: border-box;
+  @include desctop{
+    width: calc(100%/3);
+    box-sizing: border-box;
+  }
+  @include tablets{
+    text-align: center;
+    width: calc(100%);
+    box-sizing: border-box;
+  }
+  @include phones{
+    text-align: center;
+    width: calc(100%);
+    box-sizing: border-box;
+  }
+}
+.footer__col-right{
+  width: calc(100%/3);
+  box-sizing: border-box;
+  @include desctop{
+    width: calc(100%/3);
+    box-sizing: border-box;
+  }
+  @include tablets{
+    text-align: right;
+    width: calc(100%/2);
+    box-sizing: border-box;
+    border-right: none;
+    border-left: none;
+    border-top: 1px rgba(255,255,255,0.6) solid;
+  }
+  @include phones{
+    text-align: center;
+    width: calc(100%);
+    box-sizing: border-box;
+    border:none;
+  }
+}
 .footer__col-center{
+  width: calc(100%/3);
+  box-sizing: border-box;
+  @include desctop{
+    width: calc(100%/3);
+    box-sizing: border-box;
+  }
+  @include tablets{
+    width: calc(100%/2);
+    box-sizing: border-box;
+    border-right: none;
+    border-left: none;
+    border-top: 1px rgba(255,255,255,0.6) solid;
+  }
+  @include phones{
+    width: calc(100%);
+    height: 100px;
+    box-sizing: border-box;
+    border-right: none;
+    border-left: none;
+    border-top: 1px rgba(255,255,255,0.6) solid;
+    border-bottom: 1px rgba(255,255,255,0.6) solid;
+  }
   height: 100%;
   border-right: 1px rgba(255,255,255,0.6) solid;
   border-left: 1px rgba(255,255,255,0.6) solid;

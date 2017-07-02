@@ -24,12 +24,30 @@
   float: left;
   width: 30%;
   position: relative;
+  @include desctop{
+    width: 30%;
+  }
+  @include tablets{
+    width: 0;
+  }
+  @include phones{
+    width: 0;
+  }
 }
 
 .blog__right {
   float: left;
   width: 70%;
   position: relative;
+  @include desctop{
+    width: 70%;
+  }
+  @include tablets{
+    width: 100%;
+  }
+  @include phones{
+    width: 100%;
+  }
 }
 
 .blog__bg{

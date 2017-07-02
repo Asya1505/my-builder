@@ -12,6 +12,15 @@
   width: 50%;
   position: relative;
   text-align: center;
+  @include desctop{
+    width: 50%;
+  }
+  @include tablets{
+    width: 100%;
+  }
+  @include phones{
+    width: 100%;
+  }
 }
 .about__right-title{
   width: 70%;
@@ -40,11 +49,12 @@
   text-align: center;
   height:100%;
   margin: 0 80px 0 80px;
+  width: 80%;
+  @include phones{
+    margin: 0;
+  }
 }
-.about__left-content{
-  width: 440px;
 
-}
 .user-description__avatar{
   width: 440px;
   height: 390px;
@@ -69,4 +79,22 @@
   text-align: left;
   font-size: 24px;
   color: #474b57;
+}
+
+.skills-row__list{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  @include tablets{
+    justify-content:center;
+    flex-wrap: wrap;
+  }
+  @include phones{
+    width: 100%;
+    justify-content:center;
+    flex-wrap: wrap;
+  }
+
 }
