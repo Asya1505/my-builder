@@ -125,9 +125,16 @@ block content
       .footer__col.footer__col-center
         .footer__menu
           nav.menu
-            each item in ['Мои работы', 'Обо мне', 'Блог', 'Авторизация']
+          ul.contacts__list
+            -
+              var pages = [
+              ['Мои работы', './works.html'],
+              ['Обо мне', './index.html'],
+              ['Блог', './blog.html']
+              ]
+            each item in pages
               li.menu__item
-                a(href="#").menu__link #{item}
+                a(href=`${item[1]}`).menu__link #{item[0]}
         .footer__socials
           ul.socials
             each item in ['vk', 'github', 'in']

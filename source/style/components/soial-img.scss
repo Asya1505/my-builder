@@ -30,6 +30,9 @@
   fill: #fff;
   opacity: .7;
 }
+.socials__img :hover{
+  fill: #083c96;
+}
 .hamburger{
   @extend .socials__item;
   float: right;

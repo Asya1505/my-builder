@@ -10,7 +10,9 @@
   background-color: #0548be;
   text-decoration: none;
 }
-
+.menu__col :hover{
+  background-color: #083c96;
+}
 .menu__col-center{
   height: 100%;
   border-right: 1px rgba(255,255,255,0.6) solid;
@@ -18,6 +20,7 @@
 }
 
 .avtorization{
+  background: rgba(255,255,255,0);
   width: 150px;
   padding: 20px 16px;
   border: 1px rgba(255,255,255,0.6) solid;
@@ -25,13 +28,15 @@
   float: right;
   margin: 24px;
   text-align: center;
-  text-decoration: none;
+  box-sizing: border-box;
 }
 .avtorization__link{
   display : inline-block;
   width:100%
 }
-
+.avtorization :hover {
+  background: #0548be;
+}
 .footer__row-welc{
   text-align: center;
   color: #ffffff;
