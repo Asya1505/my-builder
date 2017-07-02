@@ -64,3 +64,54 @@ html{
     top:90%;
   }
 }
+.login__user{
+  @include centered();
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+
+  @include phones{
+    width: 95%;
+  }
+}
+.login__col{
+  width: calc(100%/2 - 21px);
+  float: left;
+  padding:10px;
+  color: #ffffff;
+  background-color: #0548be;
+  text-decoration: none;
+}
+.login__col :hover{
+  background-color: #083c96;
+}
+.login__col-left{
+  height: 100%;
+  border-right: 1px rgba(255,255,255,0.6) solid;
+}
+.login__hello{
+  margin-top: 40px;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.input__log{
+  width: calc(100% - 20px);
+  background-color: rgb(255,255,255);
+  border: none;
+  margin-top: 20px;
+  height: 46px;
+  padding-left: 20px;
+}
+.form__ch{
+  margin: 20px;
+  color:#ffffff;
+}
+.forms__robot-text{
+  margin: 20px;
+  color:#ffffff;
+}
+.forms__radio{
+  margin: 20px;
+  color:#ffffff;
+}

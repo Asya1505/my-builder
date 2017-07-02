@@ -13,8 +13,8 @@ block content
             //a(href="#").avtorization
             //    .avtorization__btn
             //        .avtorization__text Авторизоваться
-            .hero__title
-                .user.hero__user-avt
+            .hero__title.card.effect__click
+                .user.hero__user-avt.card__font
                     .hero__avt
                         .user__pic
                             img(src="./assets/img/photo1.png", alt="").user__pic-img
@@ -37,6 +37,28 @@ block content
                         a(href="./blog.html").menu__col.menu__col-right
                             .menu__text
                                 .menu__link Блог
+                .user.login__user.card__back
+                    .login__avt
+                        .login__hello Авторизуйтесь
+                        .login__forms
+                            input(type='text', name='name', placeholder= 'Логин' ).input__log.forms__name
+                            input(type='text', name='pass', placeholder= 'Пароль').input__log.forms__pass
+                            .form__ch
+                                input(type='checkbox', name='ch', checked=false ).forms__robot-q
+                                label Я человек
+                            .forms__robot-text Вы не робот?
+                            .forms__radio
+                                input(type='radio', name='radio1', checked=false).forms__radio-q
+                                label Да
+                                input(type='radio', name='radio2', checked=false).forms__radio-q
+                                label Не уверен
+                    .login__menu
+                        a(href="./works.html").login__col.login__col-left
+                            .menu__text
+                                .menu__link Войти
+                        a(href="./blog.html").login__col.login__col-right
+                            .menu__text
+                                .menu__link На главную
         .footer.footer-welc
             .footer__row-welc.footer__text
                 p © Владимир Астахов | создано с любовью в LoftSchool | 2016

@@ -36,10 +36,73 @@
 .hamburger{
   @extend .socials__item;
   float: right;
+  padding: 20px;
 }
-.hamburger__link{
-  @extend .socials__link;
+//.hamburger__link{
+//  @extend .socials__link;
+//}
+//.hamburger__img{
+//  @extend .socials__img;
+//}
+.hamburger {
+  display: inline-block;
+  width:18px;
+  height:18px;
+  cursor: pointer;
+  text-decoration: none;
 }
-.hamburger__img{
-  @extend .socials__img;
+
+.hamburger i {
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 3px;
+  color:#252525;
+  font:bold 14px/.4 Helvetica;
+  text-transform: uppercase;
+  text-indent:-55px;
+  background: #fff;
+  transition:all .2s ease-out;
 }
+
+.hamburger i::before, a i::after {
+  content:'';
+  width: 18px;
+  height: 3px;
+  background: #fff;
+  position: absolute;
+  left:0;
+  transition:all .2s ease-out;
+}
+
+.hamburger i::before { top: -7px; }
+.hamburger i::after { bottom: -7px; }
+.hamburger:hover i::before { top: -10px; }
+.hamburger:hover i::after { bottom: -10px; }
+.hamburger.active i { background: rgba(0,0,0,0); }
+
+.hamburger.active i::before {
+  top:0;
+  -webkit-transform: rotateZ(45deg);
+  -moz-transform: rotateZ(45deg);
+  -ms-transform: rotateZ(45deg);
+  -o-transform: rotateZ(45deg);
+  transform: rotateZ(45deg);
+}
+
+.hamburger.active i::after {
+  bottom:0;
+  -webkit-transform: rotateZ(-45deg);
+  -moz-transform: rotateZ(-45deg);
+  -ms-transform: rotateZ(-45deg);
+  -o-transform: rotateZ(-45deg);
+  transform: rotateZ(-45deg);
+}
+
+/* Button placement */
+//.hamburger {
+//  position: absolute;
+//  top: 50px;
+//  right: 50px;
+//}
+
