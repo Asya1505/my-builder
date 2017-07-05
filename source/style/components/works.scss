@@ -118,6 +118,7 @@
 .work-title__pic-title {
   @extend .work-title__pic;
   height: 180px;
+  transform: rotate(190deg);
 }
 .work__description-title {
   @extend .work__description;
@@ -182,6 +183,12 @@
 }
 .work__name-call {
   @extend .work__name;
+  width: 400px;
+  margin: 72px 0;
+  position: absolute;
+  top:0;
+}
+.work__row-headpic{
   width: 400px;
   margin: 72px 0;
 }
@@ -319,7 +326,7 @@
   align-items: stretch;
   justify-content:center;
 }
-
+.work__row-headpic
 .comment__descp{
   text-align: left;
   font-size: 16px;
@@ -328,4 +335,14 @@
 .comment__name{
   font-size: 16px;
   font-style: italic;
+}
+.work__up {
+  @extend .work__name;
+  width: 400px;
+  margin: 72px 0;
+}
+
+.work__row-head__pic{
+  @extend .work-title__pic-title;
+  transform: rotate(30deg);
 }

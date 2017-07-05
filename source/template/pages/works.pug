@@ -74,14 +74,13 @@ block content
                             .up__pic
                                 svg.w-up__pic
                                     use(xlink:href="./assets/img/sprite.svg#arrow-down")
-    section.section__work.blog(style="background: url('./assets/img/works_bg.png') no-repeat;background-size: cover;")
+    section.section__work.blog(style="background: url('./assets/img/works_bg.png') no-repeat;background-size: cover; background-position:center top;")
         .work__container(style='margin-bottom:185px;')
             .work__container-call
-                .work__row
-                    //.work__title
-                    //    svg.work-title__pic
-                    //        use(xlink:href="./assets/img/sprite.svg#stars3")
-                    .work__row-head(style="background-image: url('./assets/img/sprite.svg#stars3');")
+                .work__row.work__row-head
+                    .work__row-headpic
+                        svg.work__row-head__pic
+                            use(xlink:href="./assets/img/sprite.svg#stars3")
                         .work__name-call что обо мне говорят
                 .work__row.work__row-comment
                     .work__col-cont
@@ -129,7 +128,7 @@ block content
                                    .menu__link Очистить
                 .work__row
                     .work__row-head
-                        .work__name-call
+                        .work__up
                             svg.arrow-up__pic
                                 use(xlink:href="./assets/img/sprite.svg#arrow-down")
     footer.footer

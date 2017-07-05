@@ -16,8 +16,10 @@ block content
                   use(xlink:href="./assets/img/sprite.svg#"+`${item}`)
         .hamburger
           a(href='#').hamburger__link
-            svg.hamburger__img
-              use(xlink:href="./assets/img/sprite.svg#hamburger")
+            i
+          //a(href='#').hamburger__link
+          //  svg.hamburger__img
+          //    use(xlink:href="./assets/img/sprite.svg#hamburger")
       .hero__title
         .section-title
           svg.section-title__pic
@@ -41,63 +43,66 @@ block content
       .triangle.triangle_fill_white.about__left-triangle
         svg(viewbox="0 0 1000 150" preserveAspectRatio="none").triangle__svg
           polygon(points="1000,0 1000,150 0,150")
-  section.section__work.about
-    .about__left
-      .about__left-content
-        .about__left-title
-          .block-title
-            .block-title__text Обо мне
-        .user-description
-          .user-description__image
-            img.user-description__avatar(src="./assets/img/photo.png")
-          .user-description__title
-            .block-subtitle кто я
-          .user-description__text
-            p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-    .about__right
-      .about__right-content
-        .about__right-title
-          .block__subtitle-help чем я могу быть вам полезен
-        .about__right-description
-          p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+  section.section__about.about
+    .about__container
+      .about__left
+        .about__left-content
+          .about__left-title
+            .block__title
+              svg.block__title-pic
+                use(xlink:href="./assets/img/sprite.svg#stars2")
+              .block__title-text Обо мне
+          .user-description
+            .user-description__image
+              img.user-description__avatar(src="./assets/img/photo.png")
+            .user-description__title
+              .block-subtitle кто я
+            .user-description__text
+              p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+      .about__right
         .about__right-content
-          ul.skills-list
-            each item in ['Frontend', 'Backend', 'Workflow']
-              li.skills-list__item
-                .skills-row
-                  .skills-row__title #{item}
-                  ul.skills-row__list
-                    case item
-                      when 'Frontend'
-                        -
-                          var knolege = [
-                          [html, 70],
-                          [css, 70],
-                          [js, 70]
-                          ]
-                      when 'Backend'
-                        -
-                          var knolege = [
-                          [php, 70],
-                          [sql, 70],
-                          [node, 70],
-                          [mongo, 70]
-                          ]
-                      when 'Workflow'
-                        -
-                          var knolege = [
-                          [git, 70],
-                          [galp, 70],
-                          [bower, 70]
-                          ]
-                    each kn in knolege
-                      li.skills-row__item
-                        .skill
-                          svg.skill__circle
-                            circle.skill__circle(r="40" cx="50" cy="50")
-                            circle.skill__circle-white(r="40" cx="50" cy="50")
-                          .skill__title #{kn[0]}
+          .about__right-title
+            .block__subtitle-help чем я могу быть вам полезен
+          .about__right-description
+            p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+          .about__right-content
+            ul.skills-list
+              each item in ['Frontend', 'Backend', 'Workflow']
+                li.skills-list__item
+                  .skills-row
+                    .skills-row__title #{item}
+                    ul.skills-row__list
+                      case item
+                        when 'Frontend'
+                          -
+                            var knolege = [
+                            [html, 70],
+                            [css, 70],
+                            [js, 70]
+                            ]
+                        when 'Backend'
+                          -
+                            var knolege = [
+                            [php, 70],
+                            [sql, 70],
+                            [node, 70],
+                            [mongo, 70]
+                            ]
+                        when 'Workflow'
+                          -
+                            var knolege = [
+                            [git, 70],
+                            [galp, 70],
+                            [bower, 70]
+                            ]
+                      each kn in knolege
+                        li.skills-row__item
+                          .skill
+                            svg.skill__circle
+                              circle.skill__circle()
+                              circle.skill__circle-white()
+                            .skill__title #{kn[0]}
   section.section.map
     .google-map
       iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d36868.61315160189!2d55.96481965!3d54.722143149999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1498305162850"  frameborder="0" style="border:0" allowfullscreen)
