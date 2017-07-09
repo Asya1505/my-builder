@@ -116,10 +116,21 @@ html{
   color:#ffffff;
 }
 
-.video__night{
-  //width:100%;
-  //height:auto;
-  //autoplay:autoplay;
-  //loop:loop;
-  //preload:auto;
+.hero__container-avt{
+  position: static;
+}
+.hero__bg-wel {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  top:200px;
+  left:0;
+  will-change: transform;
+}
+
+.hero__bg-img{
+  position: absolute;
+  bottom: 0;
+  left:50%;
+  transform: translateX(-50%);
 }

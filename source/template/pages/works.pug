@@ -32,7 +32,21 @@ block content
             .arrow-down.hero__scroll-button
                 svg.arrow-down__pic
                     use(xlink:href="./assets/img/sprite.svg#arrow-down")
-    section.section__work
+            nav.nav__menu
+                .nav__container
+                    ul.menu__list
+                        -
+                            var pages = [
+                            ['Мои работы', './works.html'],
+                            ['Обо мне', './index.html'],
+                            ['Блог', './blog.html'],
+                            ['Авторизация', './welcome.html']
+                            ]
+                        each item in pages
+                            li.nav__item
+                                a(href=`${item[1]}`).menu__link #{item[0]}
+
+    section.section__work.works
         .triangle__left
             .triangle.triangle_fill_black.about__left-triangle
                 svg(viewbox="0 0 1000 150" preserveAspectRatio="none").triangle__svg
@@ -48,32 +62,45 @@ block content
                     use(xlink:href="./assets/img/sprite.svg#stars2")
             .work__description-title
                 .work__name Мои работы
-        .work__container
-            .work__left
-                .work__left-content
-                    .work__description
-                        .title__desc Сайт школы онлайн образования
-                        .title__desc-lg html, css, javascript
-                        .work__btn
-                            form(action="https://loftschool.com/")
-                                button(type='submit').btn__work
+        .works__content
+            .works__left
+                .works-slider__content
+                    .works-slider__content-wrapper
+                        .works-slider__display
+                            img(src="", alt="").works-slider__display-pic
+                        .works-slider__item-about
+                            .works__subtitle.title__desc
+                                .subtitle
+                            .works__content-desc.title__desc-lg
+                            .works__content-btn
+                                a(href="#").works__content-view
                                     svg.btn__img
                                         use(xlink:href="./assets/img/sprite.svg#link")
                                     .btn__text Посмотреть сайт
-            .work__right
-                .work__right-content
-                    .w__row.w__row-up
-                        .work__desc
-                            img.works__pic-main(src="./assets/img/works.png")
-                    .w__row.w__row-down
-                        .w__left(style="background: url('./assets/img/w1.png') no-repeat;background-size: cover;")
+
+            .works__right
+                .works-slider
+                    .works-slider__controls
+                        a(href="#").works-slider__control-btn.works-slider__control-btn_left
+                            ul.works-slider__control-list
+                                -
+                                    var pages = [
+                                    ['./assets/img/1.png', 'Агентсво интернет решений ITLoft', 'node', 'http://itloft.ru/'],
+                                    ['./assets/img/2.png', 'Школа онлайн-образования LoftSchool', 'html5, CSS3, javascript, php', 'http://loftschool.com/'],
+                                    ['./assets/img/3.png', 'Портал обучающих уроков LoftBlog', 'Ruby on Rails, javascript, RESTful', 'http://loftblog.ru/'],
+                                    ['./assets/img/4.png', 'Сайт Атма йога', 'UX, design, seo', 'http://atmayoga.ru/']
+                                    ]
+                                each item in pages
+                                    li.works-slider__control-item(data-full=`${item[0]}`, data-title=`${item[1]}`,data-skills=`${item[2]}`,data-link=`${item[3]}`)
+                                        img.works-slider___control-img(src=`${item[0]}`)
                             .up__pic
                                 svg.w-down__pic
                                     use(xlink:href="./assets/img/sprite.svg#arrow-down")
-                        .w__right(style="background: url('./assets/img/w2.png') no-repeat;background-size: cover;")
+                        a(href="#").works-slider__control-btn.works-slider__control-btn_right
                             .up__pic
-                                svg.w-up__pic
+                                svg.w-down__pic
                                     use(xlink:href="./assets/img/sprite.svg#arrow-down")
+
     section.section__work.blog(style="background: url('./assets/img/works_bg.png') no-repeat;background-size: cover; background-position:center top;")
         .work__container(style='margin-bottom:185px;')
             .work__container-call
@@ -86,7 +113,7 @@ block content
                     .work__col-cont
                         .work__col-left
                             .comment__pic
-                                img(src="./assets/img/viking.png", alt="").comment__pic-img
+                                img(src="./assets/img/avt1.jpg", alt="").comment__pic-img
                             .comment__description
                                 .comment__descp Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
                                 .comment__name
@@ -95,7 +122,7 @@ block content
                     .work__col-cont
                         .work__col-right
                             .comment__pic
-                                img(src="./assets/img/viking.png", alt="").comment__pic-img
+                                img(src="./assets/img/avt2.jpg", alt="").comment__pic-img
                             .comment__description
                                 .comment__descp Этот код выдержеит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
                                 .comment__name
@@ -106,21 +133,14 @@ block content
                        .call__title
                            .call__title-head Связаться со мной
                            .call__input
-                               input(type='text'
-                               name='name'
-                               placeholder= 'Ваше имя'
-                               ).input__coll.input__coll-name
-                               input(type='mail'
-                               name='name'
-                               placeholder= 'Ваш email'
-                               ).input__coll.input__coll-mail
-                               input(type='textarea'
-                               name='name'
-                               placeholder= 'Ваше сообщение'
-                               row=45
-                               ).input__coll.input__coll-text
+                               input(type='text', name='name', placeholder= 'Ваше имя').input__coll.input__coll-name#inputName
+                               .errorInput#errorInputName Вы не ввели имя
+                               input(type='mail', name='name', placeholder= 'Ваш email').input__coll.input__coll-mail#inputMail
+                               .errorInput#errorInputMail Вы не ввели email
+                               input(type='textarea', name='name', placeholder= 'Ваше сообщение', rows=45).input__coll.input__coll-text#inputText
+                               .errorInput#errorInputText Вы не ввели сообщение
                        .welc__menu
-                           a(href="#").menu__call-send
+                           button(type='submit').menu__call-send#sendlink
                                .menu__text
                                    .menu__link Отправить
                            a(href="#").menu__call

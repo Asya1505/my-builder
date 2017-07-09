@@ -73,8 +73,18 @@
   text-transform: uppercase;
   color: #474b57;
   margin: 30px 0;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 20px;
 }
-
+.block__subtitle-help::after {
+  content: '';
+  @include centered(x);
+  bottom: 0;
+  width: 100px;
+  height: 2px;
+  background-color: rgba(71, 75, 87, 0.8);
+}
 .about__left {
   background: $white;
 }
@@ -90,6 +100,17 @@
 .block-subtitle{
   font-size: 35px;
   color: #474b57;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 20px;
+}
+.block-subtitle::after {
+  content: '';
+  @include centered(x);
+  bottom: 0;
+  width: 89px;
+  height: 3px;
+  background-color: rgba(71, 75, 87, 0.5);
 }
 .user-description__text{
   text-align: left;

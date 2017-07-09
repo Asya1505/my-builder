@@ -2,6 +2,7 @@
   position: relative;
   height: 100%;
   background-color: white;
+  padding-top: 50px;
 }
 .blog{
   @extend .about;
@@ -24,6 +25,8 @@
   float: left;
   width: 30%;
   position: relative;
+  display: inline-block;
+  height: 100%;
   @include desctop{
     width: 30%;
   }
@@ -36,9 +39,10 @@
 }
 
 .blog__right {
-  float: left;
+  float: right;
   width: 70%;
   position: relative;
+  margin-bottom: 185px;
   @include desctop{
     width: 70%;
   }
@@ -76,11 +80,12 @@
   color: #ffffff;
 }
 .blog__left-content{
-  padding-top: 80px;
+  display: inline-block;
+  height: 100%;
 }
 
 .blog__right-content{
-  padding: 80px;
+  padding: 0 40px;
 }
 
 .content__title{
@@ -91,4 +96,20 @@
 .content__time{
   font-size: 16px;
   color: #0548be;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  padding: 0;
+}
+
+.active a{
+  border-right: #0548be solid 2px;
+  color: #0548be;
+}
+.content__text{
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 4px solid rgba(55, 62, 66, 0.07);
 }

@@ -33,6 +33,20 @@ block content
       .arrow-down.hero__scroll-button
         svg.arrow-down__pic
           use(xlink:href="./assets/img/sprite.svg#arrow-down")
+      nav.nav__menu
+        .nav__container
+          ul.menu__list
+            -
+              var pages = [
+              ['Мои работы', './works.html'],
+              ['Обо мне', './index.html'],
+              ['Блог', './blog.html'],
+              ['Авторизация', './welcome.html']
+              ]
+            each item in pages
+              li.nav__item
+                a(href=`${item[1]}`).menu__link #{item[0]}
+
   section.about
     .triangle__left
       .triangle.triangle_fill_white.about__left-triangle
@@ -104,8 +118,8 @@ block content
                               circle.skill__circle-white()
                             .skill__title #{kn[0]}
   section.section.map
-    .google-map
-      iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d36868.61315160189!2d55.96481965!3d54.722143149999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1498305162850"  frameborder="0" style="border:0" allowfullscreen)
+    .google-map#map
+      //iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d36868.61315160189!2d55.96481965!3d54.722143149999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1498305162850"  frameborder="0" style="border:0" allowfullscreen)
     .contacts__container
       .contacts
         .contacts__title
