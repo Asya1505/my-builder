@@ -1,4 +1,13 @@
-.welc__menu{
+html{
+  @include desctop{
+    font-size: 16px;
+  }
+  @include tablets{
+    font-size:15px;
+  }
+  @include phones{
+    font-size: 14px;
+  }
 
 }
 
@@ -29,7 +38,16 @@
   margin: 24px;
   text-align: center;
   box-sizing: border-box;
+  @include phones{
+    float: none;
+  }
 }
+.avt__btn{
+  @include phones{
+    text-align: center;
+  }
+}
+
 .avtorization__link{
   display : inline-block;
   width:100%
@@ -40,4 +58,68 @@
 .footer__row-welc{
   text-align: center;
   color: #ffffff;
+}
+.footer-welc{
+  @include phones{
+    top:90%;
+  }
+}
+.login__user{
+  @include centered();
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+
+  @include phones{
+    width: 95%;
+  }
+}
+.login__col{
+  width: calc(100%/2 - 21px);
+  float: left;
+  padding:10px;
+  color: #ffffff;
+  background-color: #0548be;
+  text-decoration: none;
+}
+.login__col :hover{
+  background-color: #083c96;
+}
+.login__col-left{
+  height: 100%;
+  border-right: 1px rgba(255,255,255,0.6) solid;
+}
+.login__hello{
+  margin-top: 40px;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.input__log{
+  width: calc(100% - 20px);
+  background-color: rgb(255,255,255);
+  border: none;
+  margin-top: 20px;
+  height: 46px;
+  padding-left: 20px;
+}
+.form__ch{
+  margin: 20px;
+  color:#ffffff;
+}
+.forms__robot-text{
+  margin: 20px;
+  color:#ffffff;
+}
+.forms__radio{
+  margin: 20px;
+  color:#ffffff;
+}
+
+.video__night{
+  //width:100%;
+  //height:auto;
+  //autoplay:autoplay;
+  //loop:loop;
+  //preload:auto;
 }

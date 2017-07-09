@@ -1,6 +1,7 @@
 'use strict';
 
 global.$ = {
+  cssunit: require('gulp-css-unit'),
   package: require('./package.json'),
   config: require('./gulp/config'),
   path: {

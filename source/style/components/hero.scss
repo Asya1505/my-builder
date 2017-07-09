@@ -39,8 +39,30 @@
 .hero__user-avt{
   @include centered();
   text-align: center;
-  background-color: rgba(0,0,0,0.5);
+  //background-color: rgba(0,0,0,0.5);
+
+  @include phones{
+    width: 95%;
+  }
 }
 .hero__avt{
   padding: 40px 40px 0 40px;
+}
+
+.login__user{
+  @include centered();
+  text-align: center;
+  //background-color: rgba(0,0,0,0.5);
+
+  @include phones{
+    width: 95%;
+  }
+}
+.login__avt{
+  padding: 40px 40px 0 40px;
+}
+
+.login__forms{
+  //width: 278px;
+  //height: 240px;
 }

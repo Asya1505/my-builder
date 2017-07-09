@@ -13,8 +13,11 @@
 
 .skill__circle{
   stroke: #0548be;
-  stroke-width:20;
+  stroke-width:20px;
   fill: none;
+  r: 40px;
+  cx: 50px;
+  cy:50px;
 }
 .skill__circle-white{
  @extend .skill__circle;

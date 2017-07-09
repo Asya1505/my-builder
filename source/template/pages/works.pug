@@ -16,8 +16,9 @@ block content
                                     use(xlink:href="./assets/img/sprite.svg#"+`${item}`)
                 .hamburger
                     a(href='#').hamburger__link
-                        svg.hamburger__img
-                            use(xlink:href="./assets/img/sprite.svg#hamburger")
+                        i
+                        //svg.hamburger__img
+                        //    use(xlink:href="./assets/img/sprite.svg#hamburger")
             .hero__title
                 .section-title
                     svg.section-title__pic
@@ -73,32 +74,33 @@ block content
                             .up__pic
                                 svg.w-up__pic
                                     use(xlink:href="./assets/img/sprite.svg#arrow-down")
-    section.section__work.blog(style="background: url('./assets/img/works_bg.png') no-repeat;background-size: cover;")
+    section.section__work.blog(style="background: url('./assets/img/works_bg.png') no-repeat;background-size: cover; background-position:center top;")
         .work__container(style='margin-bottom:185px;')
             .work__container-call
-                .work__row
-                    //.work__title
-                    //    svg.work-title__pic
-                    //        use(xlink:href="./assets/img/sprite.svg#stars3")
-                    .work__row-head(style="background-image: url('./assets/img/sprite.svg#stars3');")
+                .work__row.work__row-head
+                    .work__row-headpic
+                        svg.work__row-head__pic
+                            use(xlink:href="./assets/img/sprite.svg#stars3")
                         .work__name-call что обо мне говорят
                 .work__row.work__row-comment
-                    .work__col-left
-                        .comment__pic
-                            img(src="./assets/img/viking.png", alt="").comment__pic-img
-                        .comment__description
-                            .comment__descp Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
-                            .comment__name
-                                p Ковальчук Дмитрий
-                                p — основатель Loftschool
-                    .work__col-right
-                        .comment__pic
-                            img(src="./assets/img/viking.png", alt="").comment__pic-img
-                        .comment__description
-                            .comment__descp Этот код выдержеит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-                            .comment__name
-                                p Сабанцев Владимир
-                                p — преподаватель
+                    .work__col-cont
+                        .work__col-left
+                            .comment__pic
+                                img(src="./assets/img/viking.png", alt="").comment__pic-img
+                            .comment__description
+                                .comment__descp Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                                .comment__name
+                                    p Ковальчук Дмитрий
+                                    p — основатель Loftschool
+                    .work__col-cont
+                        .work__col-right
+                            .comment__pic
+                                img(src="./assets/img/viking.png", alt="").comment__pic-img
+                            .comment__description
+                                .comment__descp Этот код выдержеит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                                .comment__name
+                                    p Сабанцев Владимир
+                                    p — преподаватель
                 .work__row.work__row-call
                     .work__col-call
                        .call__title
@@ -126,7 +128,7 @@ block content
                                    .menu__link Очистить
                 .work__row
                     .work__row-head
-                        .work__name-call
+                        .work__up
                             svg.arrow-up__pic
                                 use(xlink:href="./assets/img/sprite.svg#arrow-down")
     footer.footer
