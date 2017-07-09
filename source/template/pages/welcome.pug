@@ -4,11 +4,12 @@ block variables
     - var title = 'Авторизация'
 
 block content
-    section.section.hero
-        //video(width='100%', height='auto', autoplay='autoplay', loop='loop', preload='auto')
-        //    sourse(src="./assets/img/night.mp4", type="video/mp4")
-        img.hero__bg(src="./assets/img/bg_head.png")
-        .hero__container
+    section.section.hero-avt
+        video(src="./assets/night.mp4", width='110%', height='auto', autoplay='autoplay', loop='loop', preload='auto')
+
+        .hero__bg-wel#parallax
+            img.hero__bg-img(src="./assets/img/welc.png")#parallax_img
+        .hero__container.hero__container-avt
             .avt__btn
                 button(type='submit').avtorization
                     .avtorization__text Авторизоваться
@@ -63,4 +64,4 @@ block content
                                 .menu__link На главную
         .footer.footer-welc
             .footer__row-welc.footer__text
-                p © Владимир Астахов | создано с любовью в LoftSchool | 2016
+                p © Асия Муксимова | создано с любовью в LoftSchool | 2016

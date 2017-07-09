@@ -53,7 +53,6 @@
 
 .comment__pic{
   display: block;
-  margin-bottom: 25px;
   overflow: hidden;
   width: 100%;
   height: 100%;
@@ -94,15 +93,16 @@
   height: 130px;
 }
 .menu__call{
-  width: calc(50% - 20px);
+  width: calc(50%);
   float: left;
-  padding:10px;
   color: #ffffff;
+  line-height: 45px;
   text-decoration: none;
 }
 .menu__call-send{
   @extend .menu__call;
   background-color: #0548be;
+  border: none;
 }
 .work__bg{
   width: 100%;
@@ -163,18 +163,40 @@
   }
 }
 
-.title__desc{
-  color:#474b57;
+.title__desc {
+  color: #474b57;
   font-size: 35px;
   text-transform: uppercase;
+  max-width: 80%;
+  display: inline-block;
 }
+.subtitle::after {
+    content: '';
+    @include centered(x);
+    bottom: 0;
+    width: 89px;
+    height: 3px;
+    background-color: rgba(71, 75, 87, 0.5);
+}
+
 
 .call__title-head{
   margin-top: 40px;
   font-size: 35px;
   text-transform: uppercase;
   color: #ffffff;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 20px;
   //@include Sansus();
+}
+.call__title-head::after{
+  content: '';
+  @include centered(x);
+  bottom: 0;
+  width: 89px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.7);
 }
 .work__name{
   font-size: 60px;
@@ -198,26 +220,29 @@
   color: #0548be;
 }
 
-.btn__work{
+.works__content-view{
   background: #0548be;
   width: 200px;
-  padding: 20px 16px;
+  display: inline-block;
+  line-height: 45px;
   color: #ffffff;
   margin: 24px;
   text-align: center;
+  text-decoration: none;
   outline: 0 !important;
   border: 0 !important;
 }
 
 .btn__text{
   float: left;
-  margin-left: 20px;
+  //margin-left: 20px;
 }
 .btn__img{
   fill: #ffffff;
   float: left;
   width: 20px;
   height: 20px;
+  margin: 12px 10px 12px 20px;
 }
 .arrow-up__pic{
   fill: #ffffff;
@@ -248,8 +273,10 @@
   float: left;
 }
 .up__pic{
-  height: 195px;
+  height: 100%;
+  width: 100%;
   background-color: rgba(191,192,200,0.7);
+  position: absolute;
   display: -webkit-flex; /* Safari */
   display: flex;
   align-items: center;
@@ -326,11 +353,15 @@
   align-items: stretch;
   justify-content:center;
 }
-.work__row-headpic
+
 .comment__descp{
+  background: url("../img/quote.png") no-repeat;
+  background-size: 80px;
+  background-position:left top;
   text-align: left;
   font-size: 16px;
   font-style: italic;
+  padding-top: 30px;
 }
 .comment__name{
   font-size: 16px;
