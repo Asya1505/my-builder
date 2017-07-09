@@ -1,0 +1,32 @@
+.block-title {
+  font-size: 63px;
+  color: $main-font-color;
+  @include Sansus();
+  font-family: 'bernier', serif;
+  //padding: 45px 85px;
+  position: relative;
+  display: inline-block;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-transform: uppercase;
+
+  //&:after, &:before {
+  //  content: "";
+  //  display: block;
+  //  @include centered(y);
+  //  width: 22px;
+  //  height: 5px;
+  //  background: rgba($main-font-color, .2);
+  //}
+
+  $margin: 30px;
+
+  &:after {
+    right: $margin;
+  }
+
+  &:before {
+    left: $margin;
+  }
+}

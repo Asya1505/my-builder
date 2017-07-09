@@ -1,0 +1,23 @@
+.user__pic {
+	display: block;
+	width: 147px;
+	height: 147px;
+	margin-bottom: 25px;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.user__name {
+	margin-bottom: 10px;
+	color: #ffffff;
+	font-size: 35px;
+}
+
+.user__desc {
+	font-weight: 100;
+	color: #ffffff;
+}
+
+.user__pic-img {
+	border-radius: 100%;
+}

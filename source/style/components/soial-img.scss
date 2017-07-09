@@ -1,0 +1,45 @@
+.hero__menu{
+  float: right;
+  width: 100%;
+  position: relative;
+}
+.hero__socials{
+  float: left;
+  position: relative;
+}
+.hero__menu{
+  float: left;
+  position: relative;
+}
+.socials{
+  display : inline-block;
+}
+.socials__item{
+  width: 40px;
+  display : inline-block;
+  padding: 20px 10px;
+}
+.socials__link{
+  display : inline-block;
+  width:100%
+}
+.socials__img{
+  height: 20px;
+  display : inline-block;
+  width:100%;
+  fill: #fff;
+  opacity: .7;
+}
+.socials__img :hover{
+  fill: #083c96;
+}
+.hamburger{
+  @extend .socials__item;
+  float: right;
+}
+.hamburger__link{
+  @extend .socials__link;
+}
+.hamburger__img{
+  @extend .socials__img;
+}

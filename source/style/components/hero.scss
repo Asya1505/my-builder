@@ -1,0 +1,46 @@
+.hero {
+  overflow: hidden;
+}
+
+.hero__bg {
+  width: 1920px;
+  position: absolute;
+  display: block;
+}
+
+.hero__container {
+  position: relative;
+  height: 100%;
+}
+
+.hero__title {
+  right: 0;
+  left: 0;
+  @include centered(y);
+}
+
+.hero__user {
+  @include centered();
+  text-align: center;
+}
+
+.hero__scroll-button {
+  bottom: 50px;
+  //left: calc(50% - 13px);
+  //position:absolute;
+  @include centered(x);
+}
+
+.blog__head{
+  overflow: hidden;
+  height: 50vh;
+}
+
+.hero__user-avt{
+  @include centered();
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+}
+.hero__avt{
+  padding: 40px 40px 0 40px;
+}

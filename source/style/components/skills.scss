@@ -1,0 +1,26 @@
+.skills-row__list{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.skill__circle{
+  width: 100px;
+  height: 100px;
+
+}
+
+.skill__circle{
+  stroke: #0548be;
+  stroke-width:20;
+  fill: none;
+}
+.skill__circle-white{
+ @extend .skill__circle;
+  stroke: #ffffff;
+  stroke-dasharray:100 90;
+}
+.skill{
+  margin: 20px;
+}
