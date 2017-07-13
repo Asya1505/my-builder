@@ -100,9 +100,10 @@
 }
 
 /* Button placement */
-//.hamburger {
-//  position: absolute;
-//  top: 50px;
-//  right: 50px;
-//}
+.hamburger.active {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
 

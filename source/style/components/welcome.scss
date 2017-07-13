@@ -12,12 +12,12 @@ html{
 }
 
 .menu__col{
-  width: calc(100%/3 - 21px);
+  width: calc((100% - 2px)/3);
   float: left;
-  padding:10px;
   color: #ffffff;
-  background-color: #0548be;
+  line-height: 42px;
   text-decoration: none;
+  background-color: #0548be;
 }
 .menu__col :hover{
   background-color: #083c96;
@@ -31,11 +31,12 @@ html{
 .avtorization{
   background: rgba(255,255,255,0);
   width: 150px;
-  padding: 20px 16px;
+  line-height: 42px;
   border: 1px rgba(255,255,255,0.6) solid;
   color: #ffffff;
   float: right;
   margin: 24px;
+  padding: 0;
   text-align: center;
   box-sizing: border-box;
   @include phones{
@@ -43,6 +44,9 @@ html{
   }
 }
 .avt__btn{
+  position: absolute;
+  top:0;
+  right: 0;
   @include phones{
     text-align: center;
   }
@@ -64,8 +68,29 @@ html{
     top:90%;
   }
 }
+
+.hero__user-avt{
+  position: absolute;
+  text-align: center;
+  width: 380px;
+  height: 400px;
+  background-color: rgba(0,0,0,0.5);
+
+  @include phones{
+    width: 95%;
+  }
+}
+.hero__avt{
+  padding: 40px 40px 0 40px;
+}
+
+
+.login__avt{
+  padding: 40px 40px 0 40px;
+}
+
 .login__user{
-  @include centered();
+  position: absolute;
   text-align: center;
   background-color: rgba(0,0,0,0.5);
 
@@ -74,9 +99,9 @@ html{
   }
 }
 .login__col{
-  width: calc(100%/2 - 21px);
+  width: calc((100% - 1px)/2);
   float: left;
-  padding:10px;
+  line-height: 42px;
   color: #ffffff;
   background-color: #0548be;
   text-decoration: none;
@@ -89,7 +114,6 @@ html{
   border-right: 1px rgba(255,255,255,0.6) solid;
 }
 .login__hello{
-  margin-top: 40px;
   font-size: 35px;
   text-transform: uppercase;
   color: #ffffff;

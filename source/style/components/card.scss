@@ -1,23 +1,27 @@
 .card {
   position: relative;
-
+  top: -60%;
+  left: 35%;
 }
 
 
 .card__front,
 .card__back {
+  width: 380px;
+  height: 400px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -webkit-transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
 }
+.content__card{
+}
 
 .card__front {
-  background-color: #13d6ff;
+
 }
 
 .card__back {
-  //background-color: #000;
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }

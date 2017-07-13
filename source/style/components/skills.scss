@@ -25,5 +25,10 @@
   stroke-dasharray:100 90;
 }
 .skill{
+  position: relative;
   margin: 20px;
+}
+.skill__title{
+  position: absolute;
+  @include centered();
 }

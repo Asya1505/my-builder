@@ -1,4 +1,5 @@
 .nav__menu{
+  z-index: 2;
   position: fixed;
   display: none;
   //visibility: hidden;
@@ -8,6 +9,7 @@
   height: 100vh;
 }
 .nav__container{
+  height: 100vh;
   display: -webkit-flex; /* Safari */
   display: flex;
   flex-direction: column;
