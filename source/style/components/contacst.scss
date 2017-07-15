@@ -4,13 +4,14 @@
 }
 
 .contacts{
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.9);
   position: absolute;
-  width: 50%;
+  width: 580px;
   right: 0;
   left: 0;
-  padding: 60px;
-  @include centered();
+  top: calc(50% - 93px);
+  left: 50%;
+  transform: translate(-50%, -50%);
   @include phones{
     width: 100%;
     top:25%;
@@ -57,7 +58,9 @@
 }
 
 .block-subtitle{
-  margin-bottom: 40px;
+  font-family:Sansus, Roboto, sans-serif;
+  margin-bottom: 10px;
+  margin-top: 38px;
   font-size: 36px;
   text-transform: uppercase;
   color: #474b57;
